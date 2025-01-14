@@ -15,6 +15,7 @@ img{
 h1, h2, h3, p, ul, ol{
     margin: 0;
     padding: 0;
+    font-weight: normal;
 }
 
 a{
@@ -22,10 +23,147 @@ a{
 }
 
 body{
-    background-color: #1E1E1E;
-    color: #F5F5F5;
+    background-color: #030010;
+    color: #F1F1F1;
+    font-family: "Tsukimi Rounded", Helvetica, sans-serif;
+    margin: auto;
+}
+
+.banner{
+    font-family: "Neonderthaw", Impact, serif;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    margin: 0.1em 1.3em 1.8em;
+    gap: 0;
+}
+
+header h1{
+    display: flex;
+    gap: 0.25em;
+    font-size: 4.1rem;
+    align-items: last baseline;
+}
+
+header h1 .banner{
+    display: flex;
+    font-size: 6.8rem;
+    color: #11FF00;
+    animation: flicker 8s infinite;
+}
+
+header h3{
+    display: flex;
+    gap: 0.3em;
+    font-size: 1.8rem;
+    justify-content: end;
+    align-items: last baseline;
+}
+
+header h3 .banner{
+    display: flex;
+    font-size: 3rem;
+    color: #FF56EB;
+    animation: flicker 8s 3.7s;
+}
+
+@keyframes flicker {
+    0%{
+        opacity: 100%;
+    }
+    12%{
+        opacity: 100%;
+    }
+    14%{
+        opacity: 0%;
+    }
+    20%{
+        opacity: 100%;
+    }
+    45%{
+        opacity: 100%
+    }
+    46%{
+        opacity: 0%;
+    }
+    52%{
+        opacity: 100%;
+    }
+    90%{
+        opacity: 100%;
+    }
+    91%{
+        opacity: 0%;
+    }
+    93%{
+        opacity: 100%;
+    }
 }
 
 main{
     display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+section{
+    border: 2px solid #F1F1F1;
+    border-radius: 2em;
+    padding: 5%;
+    flex-grow: 1;
+    min-width: 20em;
+    max-width: 30em;
+    transition: background-color 0.5s ease;
+}
+
+section:hover{
+    background-color: rgba(255, 230, 200, .15);
+}
+
+h2{
+    margin-bottom: 1em;
+}
+
+a{
+    color: #868686;
+}
+
+a:hover{
+    color: #31CCFF;
+}
+
+footer{
+    text-align: end;
+    margin-top: 3em;
+}
+
+footer a:hover{
+    color: #11FF00;
+}
+
+@media screen and (min-width:700px) {
+    body{
+        max-width: 80%;
+    }
+
+    header, main{
+        flex-direction: row;
+    }
+
+    header{
+        gap: 2em;
+        align-items: last baseline;
+    }
+
+    main{
+        gap: 2%;
+    }
+    
+    section{
+        min-width: 1em;
+        max-width: 20em;    
+    }
 }
