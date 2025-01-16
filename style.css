@@ -149,8 +149,6 @@ section{
 .one:hover{
     border: 2px groove #eaff00;
     box-shadow: 0px 0px 3px #eaff00, 0px 0px 3px #eaff00 inset;
-    /* animation: __ 8s infinite */
-    /* background-color: rgba(255, 243, 68, 0.1); */
 }
 
 .two:hover{
@@ -238,14 +236,5 @@ footer a:hover{
         min-width: 1em;
         max-width: 20em;    
         padding: 2.8%;
-    }
-
-    .spotlight{
-        background-color: #5a5a5a;
-        margin: 2em auto;
-        width: 90px;
-        height: 80px;
-        transition: rotate 1s;
-        /* rotate: -20deg; */
     }
 }
