@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            font-family: 'Comic Sans MS';
+            text-align: center;
+            background-color: black;
+            color:white;
+        }
+    </style>
+    <title>Experiment 1</title>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>(open the console to check the code's functionality!)</h2>
+
+    <script>
+        //this experiment hits you with the classic "hi hungry, i'm dad!" joke (also called "jay jokes" in my friend group.... i'm sure you can guess why). and then belately asks for your opinion on puns
+
+        var identities = []; 
+        identities.push(prompt("How are you doing?\n\nYou: I'm...", ""));
+        identities.push(prompt("How old are you?\n\nYou: I'm...", ""));
+        //^ sequence
+        
+        var apology = prompt('Do you get mad at puns? (Please answer either "yes" or "no")').toLowerCase();
+
+        for(var identity of identities){
+            console.log(`Hi ${identity}, I'm Jay!`);
+        }
+        //^loop
+
+        if(apology === "no"){
+            console.log(`phew\n`);
+        }
+        else if(apology === "yes"){
+            console.log(`lol sorry\n`);
+        }
+        else if(apology === 'either "yes" or "no"' || apology === 'either "yes" or "no")'||apology === 'either yes or no'){
+            console.log(`well done for answering "either "yes" or "no"" :) `);
+        }
+        else{
+            console.log(`well SOMEONE didn't say either yes or no :rolling_eyes:\n`);
+            
+        }
+        //^selection
+    </script>
+</body>
+</html>
