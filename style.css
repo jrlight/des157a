@@ -65,8 +65,8 @@ header h3{
 header h3 .banner{
     display: flex;
     font-size: 3rem;
-    color: #FF56EB;
-    animation: flicker 8s 3.7s;
+    color: #ff14d4;
+    animation: flicker 8s 3.7s infinite;
 }
 
 @keyframes flicker {
@@ -77,9 +77,18 @@ header h3 .banner{
         opacity: 100%;
     }
     14%{
-        opacity: 0%;
+        opacity: 20%;
     }
     20%{
+        opacity: 100%;
+    }
+    30%{
+        opacity: 100%;
+    }
+    32%{
+        opacity: 70%;
+    }
+    36%{
         opacity: 100%;
     }
     45%{
@@ -89,6 +98,24 @@ header h3 .banner{
         opacity: 0%;
     }
     52%{
+        opacity: 100%;
+    }
+    57%{
+        opacity: 100%;
+    }
+    59%{
+        opacity: 60%;
+    }
+    65%{
+        opacity: 100%;
+    }
+    80%{
+        opacity: 100%;
+    }
+    82%{
+        opacity: 70%;
+    }
+    85%{
         opacity: 100%;
     }
     90%{
@@ -116,15 +143,36 @@ section{
     flex-grow: 1;
     min-width: 20em;
     max-width: 30em;
-    transition: background-color 0.5s ease;
+    transition: all 0.5s ease-out;
 }
 
-section:hover{
-    background-color: rgba(255, 230, 200, .15);
-    /* background-color: hsla(50, 10, 100, .5); */
+.one:hover{
+    border: 2px groove #eaff00;
+    box-shadow: 0px 0px 3px #eaff00, 0px 0px 3px #eaff00 inset;
+    /* animation: __ 8s infinite */
+    /* background-color: rgba(255, 243, 68, 0.1); */
+}
+
+.two:hover{
+    border: 2px groove #11FF00;
+    box-shadow: 0px 0px 3px #11FF00, 0px 0px 3px #11FF00 inset;
+}
+
+.three:hover{
+    border: 2px groove #00ffee;
+    box-shadow: 0px 0px 3px #00ffee, 0px 0px 3px #00ffee inset;
+}
+
+.four:hover{
+    border: 2px groove #ff14d4;
+    box-shadow: 0px 0px 3px #ff14d4, 0px 0px 3px #ff14d4 inset;
 }
 
 h2{
+    margin-bottom: 1em;
+}
+
+li{
     margin-bottom: 1em;
 }
 
@@ -132,8 +180,20 @@ a{
     color: #868686;
 }
 
-a:hover{
-    color: #31CCFF;
+.one a:hover{
+    color: #eaff00;
+}
+
+.two a:hover{
+    color: #11FF00;
+}
+
+.three a:hover{
+    color: #00ffee;
+}
+
+.four a:hover{
+    color: #ff14d4;
 }
 
 footer{
@@ -166,5 +226,14 @@ footer a:hover{
     section{
         min-width: 1em;
         max-width: 20em;    
+    }
+
+    .spotlight{
+        background-color: #5a5a5a;
+        margin: 2em auto;
+        width: 90px;
+        height: 80px;
+        transition: rotate 1s;
+        /* rotate: -20deg; */
     }
 }
