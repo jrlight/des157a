@@ -1,0 +1,140 @@
+/* resets */
+
+*{
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, p, ul, ol{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* base style */
+
+body{
+        /*colors*/
+        --neon: #00FF00;
+        --redPen: #AC0000;
+        --bluePen: #00066F;
+        --pencil: #626262;
+        --paper: #F5F5F5;
+        --paperLine: rgba(23,109,185,.66);
+        --spiral: #C6C6C6;
+        --postIt: #FFFF43;
+        --tape: #F7F7F7;
+            /* note: opacity is 58% */
+        --darkBg: #000000;
+        --lightBg: #744233;
+        --whiteOut: rgba(255,255,255,.9);
+
+        background-color: var(--lightBg);
+}
+
+h1{
+    font-family: "Tilt Neon", Impact, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--neon);
+}
+
+h2{
+    font-family: "Oooh Baby", serif;
+    /* font-weight: 800; */
+    font-style: normal;
+    color: var(--redPen);
+    background-color: var(--whiteOut);
+}
+
+h3, p, label, .nav{
+    font-family: "Shadows Into Light Two", serif;
+    font-weight: 400;
+    font-style: normal;
+    color:var(--bluePen);
+}
+
+input{
+    font-family: "Shadows Into Light Two", serif;
+    font-weight: 400;
+    font-style: normal;
+    color:var(--pencil);
+}
+
+header{
+    display: flex;
+}
+
+main{
+    display: flex;
+}
+
+aside{
+    display: none;
+}
+
+#postIt{
+    background-color: var(--postIt);
+}
+
+section{
+    background-color: var(--paper);
+    margin: 2em 5em;
+    padding:1em;
+}
+
+.nav{
+    cursor: pointer;
+    text-align: right;
+}
+
+label{
+    display: inline;
+    margin-left: 1em;
+}
+
+input{
+    display: block;
+    margin-left: 1em;
+}
+
+.pg1{
+    /* display: none; */
+}
+
+.pg2{
+    display: none;
+}
+
+.pg3{
+    display: none;
+}
+
+@media screen and (min-width:800px) {
+    aside{
+        display: block;
+        flex: 1;
+    }
+
+    section{
+        flex: 1;
+    }
+
+    #postIt{
+        width:10em;
+        padding:1em;
+    }
+}

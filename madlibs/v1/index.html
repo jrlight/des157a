@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Shadows+Into+Light+Two&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Mad Libs V1</title>
+    <!-- <script src="script.js" defer></script>  -->
+</head>
+
+<body>
+    <header>
+        <h1>Stand-up Comedy</h1>
+        <h2>^ GENERATOR</h2>
+    </header>
+
+    <main>
+        <aside>
+            <!-- <img src="" alt="A microphone on a stand"> -->
+            <div id="postIt">
+                <p>wanna be a comic but don’t wanna write? take one of my sets and change a few words around!</p>
+            </div>
+        </aside>
+
+        <section>
+            <div class="pg1">
+                <h3>give me a...</h3>
+                <form>
+                    <!-- page 1 -->
+                    <label for="fam">type of family member:</label><input type="text" id="fam" required>
+                    <label for="occupation1">occupation:</label><input type="text" id="occupation1" required>
+                    <label for="adj1">adjective:</label><input type="text" id="adj1" required>
+                    <label for="verb1">verb ending in -ing:</label><input type="text" id="verb1" required>
+                    <label for="plnoun1">plural noun:</label><input type="text" id="plnoun1" required>
+                    <label for="verb2">verb ending in -ing:</label><input type="text" id="verb2" required>
+                    <label for="adj2">adjective:</label><input type="text" id="adj2" required>
+                    <label for="adj3">adjective:</label><input type="text" id="adj3" required>
+                    <label for="plnoun2">plural noun:</label><input type="text" id="plnoun2" required>
+                    <label for="occupation2">occupation:</label><input type="text" id="occupation2" required>
+                    <label for="noun1">noun:</label><input type="text" id="noun1" required>
+                    <label for="noun2">noun:</label><input type="text" id="noun2" required>
+                    <input type ="submit" name="pg1submit" id="send-pg1" value="next ->" class="nav">
+                </form>
+            </div>
+
+            <div class="pg2">
+                <h3>give me a...</h3>
+                <form>
+                    <!-- page 2 -->
+                    <label for="adj4">adjective:</label><input type="text" id="adj4" required>
+                    <label for="verb3">verb:</label><input type="text" id="verb3" required>
+                    <label for="adj5">adjective:</label><input type="text" id="adj5" required>
+                    <label for="noun3">noun:</label><input type="text" id="noun3" required>
+                    <label for="adj6">adjective:</label><input type="text" id="adj6" required>
+                    <label for="num">number:</label><input type="text" id="num" required>
+                    <label for="verb4">verb ending in -ing:</label><input type="text" id="verb4" required>
+                    <label for="noun4">noun:</label><input type="text" id="noun4" required>
+                    <label for="verb5">verb ending in -ed:</label><input type="text" id="verb5" required>
+                    <label for="verb6">verb ending in -ed:</label><input type="text" id="verb6" required>
+                    <label for="noun5">noun:</label><input type="text" id="noun4" required>
+                    <p class="nav"><- prev</p>
+                    <input type ="submit" name="pg2submit" id="send-pg2" value="SUBMIT! ->" class="nav">
+                </form>
+            </div>
+
+            <div class="pg3">
+                <!-- page 3 -->
+                <h3>Extremely Original Stand-up Set:</h3>
+                <p>
+                    So my [TYPE OF FAMILY MEMBER] is an [OCCUPATION]. It’s pretty [ADJECTIVE]. The thing is, nowadays she doesn’t spend her time [VERB ENDING IN -NG] at [PLURAL NOUN], and instead spends her time [VERB ENDING IN -ING] at [ADJECTIVE] [ADJECTIVE] [PLURAL NOUN].
+                </p>
+                <p>
+                    …She’s now a [OCCUPATION] of [NOUN] and [NOUN].
+                </p>
+                <p>
+                    Now, that means I can look her up on RateMy[OCCUPATION*]. It’s very [ADJECTIVE], cuz then I can [VERB] at all the [ADJECTIVE] reviews and go “THAT’S MY [TYPE OF FAMILY MEMBER*] YOU [NOUN]!” And then I [VERB*] at the [ADJECTIVE] reviews and I’m like “aww, that’s my [TYPE OF FAMILY MEMBER*], you [NOUN*] ^-^”
+                </p>
+                <p>
+                    Now, she has a lot of [ADJECTIVE*] reviews— not to brag, but her average is over [NUMBER] stars.
+                </p>
+                <p>
+                    But I was reading this one [ADJECTIVE*] review and it starts off “She will [VERB] you for [VERB ENDING IN -ING] [NOUN] about ‘what has already been [VERB ENDING IN -ED]”, to which I was like “........ I can see it. As someone who was [VERB ENDING IN -ED] by this [NOUN]..... I can see it.”
+                </p>
+            </div>
+<!-- 
+            <nav class="pg1">
+                <p>next -></p>
+            </nav>
+
+            <nav class="pg2">
+                <p><- prev</p>
+                <p>SUBMIT! -></p>
+            </nav> -->
+            
+            <nav class="pg3 nav">
+                <p>try again?</p>
+            </nav>
+        </section>
+    </main>
+</body>
+
+</html>
