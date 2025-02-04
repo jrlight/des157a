@@ -31,18 +31,31 @@ body{
         --neon: #00FF00;
         --redPen: #AC0000;
         --bluePen: #00066F;
-        --pencil: #626262;
+        --pencil: #62626222;
         --paper: #F5F5F5;
         --paperLine: rgba(23,109,185,.66);
         --spiral: #C6C6C6;
         --postIt: #FFFF43;
         --tape: #F7F7F7;
             /* note: opacity is 58% */
-        --darkBg: #000000;
-        --lightBg: #744233;
+        --darkBg: #050505;
+        --lightBg: #7c3f2c;
         --whiteOut: rgba(255,255,255,.9);
 
-        background-color: var(--lightBg);
+        background-color: var(--darkBg);
+        font-family: "Shadows Into Light Two", serif;
+        font-weight: 400;
+        font-style: normal;
+        color:var(--bluePen);}
+
+main{
+    display: flex;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
 }
 
 h1{
@@ -50,6 +63,8 @@ h1{
     font-weight: 400;
     font-style: normal;
     color: var(--neon);
+    font-size: 4.3rem;
+    text-shadow: 0px 0px 6px var(--neon);
 }
 
 h2{
@@ -58,14 +73,16 @@ h2{
     font-style: normal;
     color: var(--redPen);
     background-color: var(--whiteOut);
+    font-size: 2.7rem;
+    align-self: flex-end;
 }
-
+/* 
 h3, p, label, .nav{
     font-family: "Shadows Into Light Two", serif;
     font-weight: 400;
     font-style: normal;
     color:var(--bluePen);
-}
+} */
 
 input{
     font-family: "Shadows Into Light Two", serif;
@@ -74,20 +91,16 @@ input{
     color:var(--pencil);
 }
 
-header{
-    display: flex;
-}
-
-main{
-    display: flex;
-}
-
 aside{
     display: none;
 }
 
 #postIt{
     background-color: var(--postIt);
+}
+
+.tape{
+    background-color: var(--tape);
 }
 
 section{
@@ -102,13 +115,19 @@ section{
 }
 
 label{
-    display: inline;
+    display: block;
     margin-left: 1em;
 }
 
 input{
-    display: block;
+    display: inline;
     margin-left: 1em;
+}
+
+input[type="submit"] {
+    color: var(--bluePen);
+    border: 0;
+    background-color: transparent;
 }
 
 .pg1{
@@ -127,6 +146,7 @@ input{
     aside{
         display: block;
         flex: 1;
+        position: relative;
     }
 
     section{
@@ -135,6 +155,21 @@ input{
 
     #postIt{
         width:10em;
-        padding:1em;
+        padding:1.3em;
+        padding-top: 2em;
+        position: absolute;
+        left: 15em;
+        bottom: 15em;
+        rotate: -28deg;
+
+    }
+
+    .tape{
+        width: 2em;
+        height:3em;
+        opacity: .62;
+        position: absolute;
+        top: -1.5em;
+        left: 3.7em;
     }
 }
