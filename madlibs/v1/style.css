@@ -33,7 +33,7 @@ body{
         --bluePen: #00066F;
         --pencil: #4a4a4af7;
         --paper: #F5F5F5;
-        --paperLine: rgba(23,109,185,.66);
+        --paperLine: rgba(23, 109, 185, 0.475);
         --spiral: #C6C6C6;
         --postIt: #FFFF43;
         --tape: #F7F7F7;
@@ -52,6 +52,13 @@ main{
     display: flex;
 }
 
+header{
+    margin-top: 1em;
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
 h1{
     font-family: "Tilt Neon", Impact, sans-serif;
     font-weight: 400;
@@ -66,17 +73,26 @@ h2{
     /* font-weight: 800; */
     font-style: normal;
     color: var(--redPen);
-    background-color: var(--whiteOut);
-    font-size: 2.7rem;
+    font-size: 2.25rem;
     align-self: flex-end;
+    /* padding: 0.2em 0.2em; */
+    position: relative;
+    top:1rem;
+    right:3rem;
+    z-index: 1;
+    -webkit-text-stroke: 1px var(--redPen);
 }
-/* 
-h3, p, label, .nav{
-    font-family: "Shadows Into Light Two", serif;
-    font-weight: 400;
-    font-style: normal;
-    color:var(--bluePen);
-} */
+
+#whiteout{
+    position: absolute;
+    background-color: var(--whiteOut);
+    width: 7.8em;
+	height: 1.6em;
+	transform: skew(-30deg);
+    top:-0.3em;
+    left: -0.5em;
+    z-index: -1;
+}
 
 input{
     font-family: "Shadows Into Light Two", serif;
@@ -99,12 +115,18 @@ aside{
 
 section{
     background-color: var(--paper);
-    margin: 2em 5em;
-    padding:1em;
+    margin: 2em 1em;
+    padding:1.5em 2em 1em 3em;
+    max-width: 550px;
+}
+
+h3{
+    font-size: 1.7rem;
 }
 
 hr{
     color:var(--paperLine);
+    margin: -0.1em 0em 0.5em 0em;
 }
 
 .nav{
@@ -112,20 +134,38 @@ hr{
     text-align: right;
 }
 
-label{
+label, input{
     display: inline;
-    margin-left: 1em;
+}
+
+label{
+    margin-left: 1.5rem;
+    margin-bottom: -3em;
+    font-size: 1.2rem;
+}
+
+.note{
+    display: inline;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.note:last-of-type{
+    margin-left: 1.8rem;
 }
 
 input{
-    display: inline;
-    margin-left: 1em;
+    padding: 0;
+    margin-bottom: -3em;
 }
 
 input[type="text"] {
+    margin-left: 0.6em;
     background-color: transparent;
     border: none;
     border-bottom: 2px solid var(--bluePen); 
+    /* margin-top: -5px; */
+    height: 1rem;
 }
 
 input[type="text"]:focus {    
@@ -136,6 +176,7 @@ input[type="submit"] {
     color: var(--bluePen);
     border: 0;
     background-color: transparent;
+    font-size: 1.2rem;
 }
 
 p{
@@ -143,32 +184,33 @@ p{
 }
 
 .pg1{
-    /* display: none; */
+    display: none;
 }
 
 .pg2{
-    display: none;
+    /* display: none; */
 }
 
 .pg3{
     display: none;
 }
 
-@media screen and (min-width:800px) {
+@media screen and (min-width:900px) {
     header{
-        display: flex;
+        flex-direction: row;
         justify-content: center;
         gap: 1em;
     }
-    
+
+    h2{
+        margin-top: 1.2em;
+        right:0;
+    }
+
     aside{
         display: block;
         flex: 1;
         position: relative;
-    }
-
-    section{
-        flex: 1;
     }
 
     #postIt{
@@ -190,4 +232,22 @@ p{
         top: -1.5em;
         left: 3.7em;
     }
+
+    section{
+        flex: 1;
+        margin: 3em 5em;
+        padding:1.5em 3em 1em 4em;    
+    }
+
+    label{
+        margin-left: 1.5em;
+        margin-bottom: -3em;
+    }
+    
+    input{
+        padding: 0;
+        margin-left: 0.5em;
+        margin-bottom: -3em;
+    }
+    
 }
