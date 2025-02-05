@@ -31,7 +31,7 @@ body{
         --neon: #00FF00;
         --redPen: #AC0000;
         --bluePen: #00066F;
-        --pencil: #62626222;
+        --pencil: #4a4a4af7;
         --paper: #F5F5F5;
         --paperLine: rgba(23,109,185,.66);
         --spiral: #C6C6C6;
@@ -50,12 +50,6 @@ body{
 
 main{
     display: flex;
-}
-
-header{
-    display: flex;
-    justify-content: center;
-    gap: 1em;
 }
 
 h1{
@@ -109,13 +103,17 @@ section{
     padding:1em;
 }
 
+hr{
+    color:var(--paperLine);
+}
+
 .nav{
     cursor: pointer;
     text-align: right;
 }
 
 label{
-    display: block;
+    display: inline;
     margin-left: 1em;
 }
 
@@ -124,10 +122,24 @@ input{
     margin-left: 1em;
 }
 
+input[type="text"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--bluePen); 
+}
+
+input[type="text"]:focus {    
+    /* border: 2px dashed var(--pencil);       */
+}
+
 input[type="submit"] {
     color: var(--bluePen);
     border: 0;
     background-color: transparent;
+}
+
+p{
+    padding-bottom: 1em;
 }
 
 .pg1{
@@ -143,6 +155,12 @@ input[type="submit"] {
 }
 
 @media screen and (min-width:800px) {
+    header{
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+    }
+    
     aside{
         display: block;
         flex: 1;
