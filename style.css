@@ -23,8 +23,17 @@ a{
 }
 
 body{
-    background-color: #030010;
-    color: #F1F1F1;
+    /* colors */
+    --neonGreen: #11FF00;
+    --neonPink: #ff14d4;
+    --neonYellow: #eaff00;
+    --neonBlue: #00ffee;
+    --bg: #030010;
+    --text: #F1F1F1;
+    --text2: #868686;
+
+    background-color: var(--bg);
+    color: var(--text);
     font-family: "Tsukimi Rounded", Helvetica, sans-serif;
     margin: auto;
 }
@@ -50,7 +59,7 @@ header{
 .title .banner{
     display: flex;
     font-size: 6.8rem;
-    color: #11FF00;
+    color: var(--neonGreen);
     animation: flicker 8s infinite;
 }
 
@@ -65,7 +74,7 @@ header{
 .subtitle .banner{
     display: flex;
     font-size: 3rem;
-    color: #ff14d4;
+    color: var(--neonPink);
     animation: flicker 8s 3.7s infinite;
 }
 
@@ -137,7 +146,7 @@ main{
 }
 
 section{
-    border: 2px solid #F1F1F1;
+    border: 2px solid var(--text);
     border-radius: 2em;
     padding: 1.7em;
     flex-grow: 1;
@@ -147,23 +156,23 @@ section{
 }
 
 .one:hover{
-    border: 2px groove #eaff00;
-    box-shadow: 0px 0px 3px #eaff00, 0px 0px 3px #eaff00 inset;
+    border: 2px groove var(--neonYellow);
+    box-shadow: 0px 0px 3px var(--neonYellow), 0px 0px 3px var(--neonYellow) inset;
 }
 
 .two:hover{
-    border: 2px groove #11FF00;
-    box-shadow: 0px 0px 3px #11FF00, 0px 0px 3px #11FF00 inset;
+    border: 2px groove var(--neonGreen);
+    box-shadow: 0px 0px 3px var(--neonGreen), 0px 0px 3px var(--neonGreen) inset;
 }
 
 .three:hover{
-    border: 2px groove #00ffee;
-    box-shadow: 0px 0px 3px #00ffee, 0px 0px 3px #00ffee inset;
+    border: 2px groove var(--neonBlue);
+    box-shadow: 0px 0px 3px var(--neonBlue), 0px 0px 3px var(--neonBlue) inset;
 }
 
 .four:hover{
-    border: 2px groove #ff14d4;
-    box-shadow: 0px 0px 3px #ff14d4, 0px 0px 3px #ff14d4 inset;
+    border: 2px groove var(--neonPink);
+    box-shadow: 0px 0px 3px var(--neonPink), 0px 0px 3px var(--neonPink) inset;
 }
 
 h2{
@@ -179,28 +188,28 @@ li:last-child{
 }
 
 a{
-    color: #868686;
+    color: var(--text2);
     transition: all 0.3s ease;
 }
 
 .one a:hover{
-    color: #eaff00;
-    text-shadow: 0px 0px 2px #eaff00;
+    color: var(--neonYellow);
+    text-shadow: 0px 0px 2px var(--neonYellow);
 }
 
 .two a:hover{
-    color: #11FF00;
-    text-shadow: 0px 0px 2px #11FF00;
+    color: var(--neonGreen);
+    text-shadow: 0px 0px 2px var(--neonGreen);
 }
 
 .three a:hover{
-    color: #00ffee;
-    text-shadow: 0px 0px 2px #00ffee;
+    color: var(--neonBlue);
+    text-shadow: 0px 0px 2px var(--neonBlue);
 }
 
 .four a:hover{
-    color: #ff14d4;
-    text-shadow: 0px 0px 2px #ff14d4;
+    color: var(--neonPink);
+    text-shadow: 0px 0px 2px var(--neonPink);
 }
 
 footer{
@@ -210,8 +219,8 @@ footer{
 }
 
 footer a:hover{
-    color: #11FF00;
-    text-shadow: 0px 0px 1.8px #11FF00;
+    color: var(--neonGreen);
+    text-shadow: 0px 0px 1.8px var(--neonGreen);
 }
 
 @media screen and (min-width:700px) {

@@ -1,0 +1,256 @@
+/* resets and setup */
+
+*{
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, p, ul, ol{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+a{
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: jayHandwriting;
+    src: url(fonts/Jay_handwriting-Regular.otf);
+}
+
+/* base style */
+
+body{
+        /*colors*/
+        --neon: #00FF00;
+        --redPen: #AC0000;
+        --bluePen: #00066F;
+        --semiTransparentBluePen: #00066fb1;
+        --pencil: #4a4a4af7;
+        --paper: #F5F5F5;
+        --paperLine: rgba(23, 109, 185, 0.475);
+        --spiral: #C6C6C6;
+        --postIt: #FFFF43;
+        --tape: #F7F7F7;
+            /* note: opacity is 58% */
+        --darkBg: #050505;
+        --lightBg: #7c3f2c;
+        --whiteOut: rgba(255,255,255,.9);
+
+        background-color: var(--darkBg);
+        font-family: "Shadows Into Light Two", serif;
+        font-weight: 400;
+        font-style: normal;
+        color:var(--bluePen);}
+
+main{
+    display: flex;
+}
+
+header{
+    margin-top: 1em;
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-family: "Tilt Neon", Impact, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--neon);
+    font-size: 4.3rem;
+    text-shadow: 0px 0px 6px var(--neon);
+}
+
+h2{
+    font-family: "Oooh Baby", serif;
+    /* font-weight: 800; */
+    font-style: normal;
+    color: var(--redPen);
+    font-size: 2.25rem;
+    align-self: flex-end;
+    /* padding: 0.2em 0.2em; */
+    position: relative;
+    top:1rem;
+    right:3rem;
+    z-index: 1;
+    -webkit-text-stroke: 1px var(--redPen);
+}
+
+#whiteout{
+    position: absolute;
+    background-color: var(--whiteOut);
+    width: 7.8em;
+	height: 1.6em;
+	transform: skew(-30deg);
+    top:-0.3em;
+    left: -0.5em;
+    z-index: -1;
+}
+
+input{
+    font-family: "Shadows Into Light Two", serif;
+    font-weight: 400;
+    font-style: normal;
+    color:var(--pencil);
+}
+
+aside{
+    display: none;
+}
+
+#postIt{
+    background-color: var(--postIt);
+}
+
+.tape{
+    background-color: var(--tape);
+}
+
+section{
+    background-color: var(--paper);
+    margin: 2em 1em;
+    padding:1.5em 2em 1em 3em;
+    max-width: 550px;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+hr{
+    margin: -0.1em 0em 0.5em 0em;
+    border: none;
+    border-bottom: 2px solid var(--paperLine);
+}
+
+.nav{
+    cursor: pointer;
+    text-align: right;
+}
+
+label, input{
+    display: inline;
+}
+
+label{
+    margin-left: 1.5rem;
+    margin-bottom: -1em;
+    font-size: 1.2rem;
+}
+
+.note{
+    display: inline;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.note:last-of-type{
+    margin-left: 1.8rem;
+}
+
+input{
+    padding: 0;
+    /* outline: 5px solid yellow; */
+}
+
+input[type="text"] {
+    margin-left: 0.6em;
+    margin-bottom: -1em;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--bluePen); 
+    height: 1.2rem;
+    font-family: "jayHandwriting", monospace;
+    font-size: 1.5rem;
+}
+
+input[type="text"]:focus {    
+    /* border: 2px dashed var(--pencil);       */
+}
+
+input[type="submit"] {
+    color: var(--bluePen);
+    border: 0;
+    background-color: transparent;
+    font-size: 1.2rem;
+}
+
+p{
+    padding-bottom: 1em;
+}
+
+.pg1{
+    /* display: none; */
+}
+
+.pg2{
+    display: none;
+}
+
+.pg3{
+    display: none;
+}
+
+@media screen and (min-width:900px) {
+    header{
+        flex-direction: row;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    h2{
+        margin-top: 1.2em;
+        right:0;
+    }
+
+    aside{
+        display: block;
+        flex: 1;
+        position: relative;
+    }
+
+    #postIt{
+        width:10em;
+        padding:1.3em;
+        padding-top: 2em;
+        position: absolute;
+        left: 15em;
+        bottom: 15em;
+        rotate: -28deg;
+
+    }
+
+    .tape{
+        width: 2em;
+        height:3em;
+        opacity: .62;
+        position: absolute;
+        top: -1.5em;
+        left: 3.7em;
+    }
+
+    section{
+        flex: 1;
+        margin: 3em 5em;
+        padding:1.5em 3em 1em 4em;    
+    }
+
+    input{
+        padding: 0;
+        margin-left: 0.5em;
+    }
+    
+}

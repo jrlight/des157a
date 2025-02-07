@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, p, ul, ol{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+a{
+    text-decoration: none;
+    color: #ff4bde;
+}
+
+body{
+    background-color: #030010;
+    color: #F1F1F1;
+    font-family: "Tsukimi Rounded", Helvetica, sans-serif;
+    margin: auto;
+}
+
+article{
+    display: flex;
+    flex-direction: row;
+}
+
+.banner{
+    font-family: "Neonderthaw", Impact, serif;
+    font-size: 6.2rem;
+    color: #11FF00;
+    animation: flicker 7s infinite;
+    text-align: center;
+}
+
+@keyframes flicker {
+    0%{
+        opacity: 100%;
+    }
+    12%{
+        opacity: 100%;
+    }
+    14%{
+        opacity: 40%;
+    }
+    20%{
+        opacity: 100%;
+    }
+    30%{
+        opacity: 100%;
+    }
+    32%{
+        opacity: 80%;
+    }
+    36%{
+        opacity: 100%;
+    }
+    45%{
+        opacity: 100%
+    }
+    46%{
+        opacity: 30%;
+    }
+    52%{
+        opacity: 100%;
+    }
+    57%{
+        opacity: 100%;
+    }
+    59%{
+        opacity: 60%;
+    }
+    65%{
+        opacity: 100%;
+    }
+    80%{
+        opacity: 100%;
+    }
+    82%{
+        opacity: 70%;
+    }
+    85%{
+        opacity: 100%;
+    }
+    90%{
+        opacity: 100%;
+    }
+    91%{
+        opacity: 50%;
+    }
+    94%{
+        opacity: 100%;
+    }
+}
+
+section{
+    background-color: #29262a;
+    padding: 3em 5em 4em;
+    margin: auto;
+    max-width: 70%;
+}
+
+section date{
+    background-color: #030010;
+    padding: 0.5em;
+}
+
+section h3{
+    font-weight: bold;
+    margin-bottom: 1.5em;
+    margin-top: 1.2em;
+}
+
+p{
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+    padding-left: 3em;
+}
+
+p:last-child{
+    margin-bottom: 0;
+}
+
+/* main{
+    display: flex;
+    align-items: center;
+} */
+
+img{
+    margin: 2em auto;
+    border-radius: 0.5em;
+}
+
+
+@media screen and (min-width:700px) {
+    body{
+        max-width: 80%;
+    }
+
+
+}
