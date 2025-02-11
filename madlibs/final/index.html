@@ -23,40 +23,43 @@
             <img src="images/placeholder.png" alt="A microphone on a stand" width="200" height="200">
             <div id="postIt">
                 <div class="tape"></div>
-                <p>wanna be a comic but don’t wanna write? take one of my sets and change a few words around!</p>
+                <p class="shown">wanna be a comic but don’t wanna write? take one of my sets and change a few words around!</p>
+
+                <p class="hidden error">hey, you have to change a few words! i'm not letting you completely steal my set!</p>
+                <p class="hidden error">you're missing a word, buddy</p>
             </div>
         </aside>
 
         <section>
-            <div class="inputs">
+            <div id="inputs" class="shown">
                 <h3>give me a...</h3>
                 <hr>
                 <form>
                     <div id="formPg1" class="shown">
                         <!-- page 1 -->
-                        <label for="fam">type of family member<div class="note">(note: will use</div><hr><div class="note">she/her pronouns in the set)</div>:</label><input type="text" id="fam" required>
+                        <label for="fam">type of family member<div class="note">(note: will use</div><hr><div class="note">she/her pronouns in the set)</div>:</label><input type="text" id="fam" >
                             <hr>
-                        <label for="occupation1">occupation:</label><input type="text" id="occupation1" required>
+                        <label for="occupation1">occupation:</label><input type="text" id="occupation1" >
                             <hr>
-                        <label for="adj1">adjective:</label><input type="text" id="adj1" required>
+                        <label for="adj1">adjective:</label><input type="text" id="adj1" >
                             <hr>
-                        <label for="verb1">verb ending in -ing:</label><input type="text" id="verb1" required>
+                        <label for="verb1">verb ending in -ing:</label><input type="text" id="verb1" >
                             <hr>
-                        <label for="plnoun1">plural noun:</label><input type="text" id="plnoun1" required>
+                        <label for="plnoun1">plural noun:</label><input type="text" id="plnoun1" >
                             <hr>
-                        <label for="verb2">verb ending in -ing:</label><input type="text" id="verb2" required>
+                        <label for="verb2">verb ending in -ing:</label><input type="text" id="verb2" >
                             <hr>
-                        <label for="adj2">adjective:</label><input type="text" id="adj2" required>
+                        <label for="adj2">adjective:</label><input type="text" id="adj2" >
                             <hr>
-                        <label for="adj3">adjective:</label><input type="text" id="adj3" required>
+                        <label for="adj3">adjective:</label><input type="text" id="adj3" >
                             <hr>
-                        <label for="plnoun2">plural noun:</label><input type="text" id="plnoun2" required>
+                        <label for="plnoun2">plural noun:</label><input type="text" id="plnoun2" >
                             <hr>
-                        <label for="occupation2">occupation:</label><input type="text" id="occupation2" required>
+                        <label for="occupation2">occupation:</label><input type="text" id="occupation2" >
                             <hr>
-                        <label for="noun1">noun:</label><input type="text" id="noun1" required>
+                        <label for="noun1">noun:</label><input type="text" id="noun1" >
                             <hr>
-                        <label for="noun2">noun:</label><input type="text" id="noun2" required>
+                        <label for="noun2">noun:</label><input type="text" id="noun2" >
                             <hr>
                         <nav class="pg1">
                             <p class="nav">next -&gt;</p>
@@ -65,31 +68,31 @@
                     
                     <div id="formPg2" class="hidden">
                         <!-- page 2 -->
-                        <label for="adj4">adjective:</label><input type="text" id="adj4" required>
+                        <label for="adj4">adjective:</label><input type="text" id="adj4" >
                             <hr>
-                        <label for="verb3">verb:</label><input type="text" id="verb3" required>
+                        <label for="verb3">verb:</label><input type="text" id="verb3" >
                             <hr>
-                        <label for="adj5">adjective:</label><input type="text" id="adj5" required>
+                        <label for="adj5">adjective:</label><input type="text" id="adj5" >
                             <hr>
-                        <label for="noun3">noun:</label><input type="text" id="noun3" required>
+                        <label for="noun3">noun:</label><input type="text" id="noun3" >
                             <hr>
-                        <label for="adj6">adjective:</label><input type="text" id="adj6" required>
+                        <label for="adj6">adjective:</label><input type="text" id="adj6" >
                             <hr>
-                        <label for="num">number:</label><input type="text" id="num" required>
+                        <label for="num">number:</label><input type="text" id="num" >
                             <hr>
-                        <label for="verb4">verb ending in -ing:</label><input type="text" id="verb4" required>
+                        <label for="verb4">verb ending in -ing:</label><input type="text" id="verb4" >
                             <hr>
-                        <label for="noun4">noun:</label><input type="text" id="noun4" required>
+                        <label for="noun4">noun:</label><input type="text" id="noun4" >
                             <hr>
-                        <label for="verb5">verb ending in -ed:</label><input type="text" id="verb5" required>
+                        <label for="verb5">verb ending in -ed:</label><input type="text" id="verb5" >
                             <hr>
-                        <label for="verb6">verb ending in -ed:</label><input type="text" id="verb6" required>
+                        <label for="verb6">verb ending in -ed:</label><input type="text" id="verb6" >
                             <hr>
-                        <label for="noun5">noun:</label><input type="text" id="noun5" required>
+                        <label for="noun5">noun:</label><input type="text" id="noun5" >
                             <hr>
                         <nav class="pg2">
                             <p class="nav">&lt;- prev</p>
-                            <input type ="submit" name="submitOnPg2" id="finalSubmission" value="SUBMIT! -&gt;" class="nav">
+                            <input type ="submit" id="finalSubmission" value="SUBMIT! -&gt;" class="nav">
                         </nav>
                     </div>
                 </form>

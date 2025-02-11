@@ -116,6 +116,10 @@ aside{
     background-color: var(--postIt);
 }
 
+.error{
+    color: var(--redPen);
+}
+
 .tape{
     background-color: var(--tape);
 }
