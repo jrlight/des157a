@@ -38,6 +38,7 @@ body{
         --bluePen: #00066F;
         --semiTransparentBluePen: #00066fb1;
         --pencil: #4a4a4af7;
+        --semiTransparentPencil: #4a4a4a8c;
         --paper: #F5F5F5;
         --paperLine: rgba(23, 109, 185, 0.475);
         --spiral: #C6C6C6;
@@ -163,22 +164,24 @@ label{
 
 input{
     padding: 0;
-    /* outline: 5px solid yellow; */
 }
 
 input[type="text"] {
-    margin-left: 0.6em;
+    outline: none; 
+    margin-left: 0.4em;
     margin-bottom: -1em;
     background-color: transparent;
     border: none;
     border-bottom: 2px solid var(--bluePen); 
-    height: 1.2rem;
+    height: 1.4rem;
+    width: 8rem;
     font-family: "jayHandwriting", monospace;
     font-size: 1.5rem;
+    padding: 0.5rem 0.15rem 1px;
 }
 
 input[type="text"]:focus {    
-    /* border: 2px dashed var(--pencil);       */
+    outline: 3px dashed var(--semiTransparentPencil);      
 }
 
 input[type="submit"] {
@@ -192,16 +195,12 @@ p{
     padding-bottom: 1em;
 }
 
-.pg1{
-    /* display: none; */
-}
-
-.pg2{
+.hidden{
     display: none;
 }
 
-.pg3{
-    display: none;
+.shown{
+    display: block;
 }
 
 @media screen and (min-width:900px) {
