@@ -32,7 +32,7 @@
                 <h3>give me a...</h3>
                 <hr>
                 <form>
-                    <div id="formPg1">
+                    <div id="formPg1" class="shown">
                         <!-- page 1 -->
                         <label for="fam">type of family member<div class="note">(note: will use</div><hr><div class="note">she/her pronouns in the set)</div>:</label><input type="text" id="fam" required>
                             <hr>
@@ -58,7 +58,9 @@
                             <hr>
                         <label for="noun2">noun:</label><input type="text" id="noun2" required>
                             <hr>
-                        <input type ="submit" name="pg1submit" id="send-pg1" value="next -&gt;" class="nav">
+                        <nav class="pg1">
+                            <p class="nav">next -&gt;</p>
+                        </nav>
                     </div>
                     
                     <div id="formPg2" class="hidden">
@@ -85,8 +87,10 @@
                             <hr>
                         <label for="noun5">noun:</label><input type="text" id="noun5" required>
                             <hr>
-                        <p class="nav">&lt;- prev</p>
-                        <input type ="submit" name="pg2submit" id="send-pg2" value="SUBMIT! -&gt;" class="nav">
+                        <nav class="pg2">
+                            <p class="nav">&lt;- prev</p>
+                            <input type ="submit" name="submitOnPg2" id="finalSubmission" value="SUBMIT! -&gt;" class="nav">
+                        </nav>
                     </div>
                 </form>
             </div>
@@ -109,21 +113,11 @@
                 <p>
                     But I was reading this one [ADJECTIVE*] review and it starts off “She will [VERB] you for [VERB ENDING IN -ING] [NOUN] about ‘what has already been [VERB ENDING IN -ED]”, to which I was like “........ I can see it. As someone who was [VERB ENDING IN -ED] by this [NOUN]..... I can see it.”
                 </p>
-
-                <nav class="pg3 nav">
-                    <p>try again?</p>
+                
+                <nav class="pg3">
+                    <p class="nav">try again?</p>
                 </nav>
-            </div>
-<!-- 
-            <nav class="pg1">
-                <p>next -></p>
-            </nav>
-
-            <nav class="pg2">
-                <p><- prev</p>
-                <p>SUBMIT! -></p>
-            </nav> -->
-            
+            </div>            
         </section>
     </main>
 </body>
