@@ -13,51 +13,40 @@
     const navs = document.querySelectorAll('.nav');
     const pg1next = navs[0];
     const pg2prev = navs[1];
-    const pg2submit = navs[2];
+    // const pg2submit = navs[2];
     const pg3tryAgain = navs[3];
 
     const allInputs = form.elements;    
 
-    let emptyCounter = 0;
-    console.log(emptyCounter);
-
 
     pg1next.addEventListener('click', function(event){
-        event.preventDefault;
+        event.preventDefault();
         
         formPg1.className = 'hidden';
         formPg2.className = 'shown';
     });
 
     pg2prev.addEventListener('click', function(event){
-        event.preventDefault;
+        event.preventDefault();
         
         formPg2.className = 'hidden';
         formPg1.className = 'shown';
     });
 
     form.addEventListener('submit', function(event){
-        event.preventDefault;
+        event.preventDefault();
         
         console.log('i ran!');
 
-        for(let i = 0; i<allInputs.length; i++){
-            if(allInputs[i] === '' || allInputs[i] === null){
-                emptyCounter++;
+        let emptyCounter = 0;
+
+        for(let i = 0; i< allInputs.length; i++){
+            if(allInputs[i].value === ''){
+                emptyCounter = emptyCounter + 1;
             }
         }
-
-        if (emptyCounter === 1){
-            postIt.children[0].className = 'hidden';
-            postIt.children[2].className = 'shown';
-            
-        }
-        else if(emptyCounter > 1){
-            postIt.children[0].className = 'hidden';
-            postIt.children[1].className = 'shown';
-
-        }
-        else{
+        
+        if(emptyCounter === 0){
             inputs.className = 'hidden';
             madLib.className = 'shown';
 
@@ -98,7 +87,34 @@
             for(const element of allValues){
                 element.value = '';
             }
+
+            postIt.children[1].className = 'shown';
+            postIt.children[2].className = 'hidden';
+            postIt.children[3].className = 'hidden';
+
+        }else if(emptyCounter === 1){
+            postIt.children[1].className = 'hidden';
+            postIt.children[2].className = 'hidden';
+            postIt.children[3].className = 'shown error';
+            
         }
+        else if(emptyCounter > 1){
+            postIt.children[1].className = 'hidden';
+            postIt.children[2].className = 'shown error';
+            postIt.children[3].className = 'hidden';
+        }else{
+            postIt.children[1].className = 'hidden';
+            postIt.children[4].className = 'shown error';
+        }
+    });
+
+    pg3tryAgain.addEventListener('click', function(event){
+        event.preventDefault();
+        
+        madLib.className = 'hidden';
+        inputs.className = 'shown';
+        formPg1.className = 'shown';
+        formPg2.className = 'hidden';
     });
 
 })();
