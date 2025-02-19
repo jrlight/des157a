@@ -1,0 +1,126 @@
+/* resets */
+*{
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, p, ul, ol{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* style */
+
+body{
+    margin: auto;
+    background-color: #030010;
+    color: #F1F1F1;
+}
+
+#container{
+    position: relative;
+    margin: auto;
+    width: 70rem;
+}
+
+#container div{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+}
+
+#container img{
+    display: block;
+    position: absolute;
+    transition: all 2.5s ease;
+}
+
+.fullview{
+    width: 70rem;
+}
+
+#center{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#poop{
+    top: 12rem;
+    left: 9rem;
+}
+
+#doggie{
+    top: 20rem;
+    left: 2rem;
+}
+
+#skeleton{
+    top: 31rem;
+    left: 3rem;
+}
+
+#dreidel{
+    top: 31rem;
+    left: 15rem;
+}
+
+#phantom{
+    top: 18rem;
+    left: 20rem;
+}
+
+#deskDragon{
+    top: 15rem;
+    right: 15rem;
+}
+
+#shrek{
+    bottom: 20rem;
+    right: 20rem;
+}
+
+#lizard{
+    bottom: 8rem;
+    right: 12rem;
+}
+
+#toad{
+    top: 10rem;
+    right: 1rem;
+}
+
+#babyBear{
+    bottom: 12rem;
+    left: 35rem;
+}
+
+.poop, .doggie, .skeleton, .dreidel, .phantom, .deskDragon, .shrek, .lizard, .toad, .babyBear{
+    width: 180rem;
+    max-width: 180rem;
+}
+
+.poop{
+    top: -10rem;
+    left: 0rem;
+}
