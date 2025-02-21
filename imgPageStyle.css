@@ -23,14 +23,53 @@ a{
 }
 
 body{
-    background-color: #030010;
-    color: #F1F1F1;
+    --bg: #030010;
+    --txt: #F1F1F1;
+    --neonGreen: #11FF00;
+    --neonPink: #ff14d4;
+    --neonYellow: #eaff00;
+    --neonBlue: #00ffee;
+    background-color: var(--bg);
+    color: var(--txt);
     font-family: "Tsukimi Rounded", Helvetica, sans-serif;
     margin: auto;
 }
 
+header{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 2.1rem;
+    margin-top: 2rem;
+    color: var(--txt);    
+}
+
 .banner{
     font-family: "Neonderthaw", Impact, serif;
+    font-weight: normal;
+    font-size: 3.2rem;
+    color: var(--neonYellow);    
+}
+
+.banner:nth-child(2){
+    color: var(--neonGreen);
+}
+
+.banner:nth-child(3){
+    color: var(--neonPink);
+}
+
+.banner:nth-child(4){
+    color: var(--neonBlue);
+}
+
+h2{
+    margin-bottom: 0.6em;
+    margin-top: 1em;
+    margin-left: 1em;
 }
 
 img{
@@ -38,13 +77,56 @@ img{
     border-radius: 0.5em;
 }
 
+.headingAbove{
+    margin-top: 0;
+}
+
+ul.notes{
+    list-style-type: symbols(cyclic "->");
+    margin-left: 2em;
+}
+
+ul.notes li, ul.subnotes li{
+    margin: 0 2.5em;
+    padding-bottom: 0.8em;
+    font-size: 1.1rem;
+}
+
+ul.subnote{
+    list-style-type: symbols(cyclic "->");
+    margin-left: 2em;
+    margin-top: -0.5em;
+}
+
 .imgborder{
     border: 3px solid rgba(242, 242, 242, 0.7);
     box-shadow: 0px 0px 6px rgba(242, 242, 242, 0.7);
 }
 
+@media screen and (min-width:690px) {
+    .vertical{
+        max-width: 35em;
+    }
+    
+    .horizontal{
+        max-width: 40em;
+    }
 
-@media screen and (min-width:700px) {
+    h2{
+        margin-left: 10%;
+    }
+
+    ul.notes{
+        margin-left: 2em;
+    }
+    
+    ul.notes li{
+        margin: 0 6em;
+        margin-right: 9em;
+    }
+}
+
+@media screen and (min-width:900px) {
     body{
         max-width: 80%;
     }
@@ -54,6 +136,23 @@ img{
     }
     
     .horizontal{
-        max-width: 49em;
+        max-width: 50em;
+    }
+
+    h2, ul.notes, ul.subnotes{
+        padding: 0em 9%;
+    }
+
+    h2{
+        margin-left: 0;
+    }
+
+    ul.notes{
+        margin-left: 3em;
+    }
+    
+    ul.notes li, ul.subnotes li{
+        margin: 0 6%;
+        margin-right: 6em;
     }
 }
