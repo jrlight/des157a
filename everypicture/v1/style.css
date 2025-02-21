@@ -23,6 +23,17 @@ a{
     text-decoration: none;
 }
 
+/* Start https://www.cursors-4u.com */ 
+* {
+    cursor: url(https://cur.cursors-4u.net/games/gam-11/gam1070.ani), url(https://cur.cursors-4u.net/games/gam-11/gam1070.png), auto !important;
+}
+
+.clickable{
+    cursor: url(https://cur.cursors-4u.net/symbols/sym-2/sym169.cur), auto !important;
+}
+
+/* End https://www.cursors-4u.com */
+
 /* style */
 
 body{
@@ -30,7 +41,8 @@ body{
     background-color: #F1F1F1;
     color: #030010;
     height: 100%; 
-    overflow: hidden
+    overflow: hidden;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
 }
 
 #bodyImg{
@@ -70,13 +82,14 @@ header{
 }
 
 h1{
-    font-family: chiller;
-    font-size: 4rem;
+    font-family: 'Chiller', 'Courier New', Courier, monospace;
+    font-size: 4.4rem;
     margin-top: 2rem;
 }
 
 header div.subtitle{
-    font-size: 1.3rem;
+    font-size: 1.15rem;
+    margin-top: 0.2rem;
 }
 
 #center{
