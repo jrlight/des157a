@@ -1,0 +1,167 @@
+/* resets */
+*{
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, p, ul, ol{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Start https://www.cursors-4u.com */ 
+* {
+    cursor: url(https://cur.cursors-4u.net/games/gam-11/gam1070.ani), url(https://cur.cursors-4u.net/games/gam-11/gam1070.png), auto !important;
+}
+
+.clickable{
+    cursor: url(https://cur.cursors-4u.net/symbols/sym-2/sym169.cur), auto !important;
+}
+
+/* End https://www.cursors-4u.com */
+
+/* style */
+
+body{
+    margin: auto;
+    background-color: #F1F1F1;
+    color: #030010;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+#bodyImg{
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+
+#hotspots div{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+}
+
+#bodyImg img{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: all 2.5s ease;
+}
+
+.fullview{
+    width: 100%;
+}
+
+div#heading{
+    position: absolute;
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+}
+
+header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-family: 'Chiller', 'Courier New', Courier, monospace;
+    font-size: 4.4rem;
+    margin-top: 2rem;
+}
+
+header div.subtitle{
+    font-size: 1.15rem;
+    margin-top: 0.2rem;
+}
+
+#center{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* #skeleton{
+    top: 12rem;
+    left: 9rem;
+}
+
+#hefty{
+    top: 20rem;
+    left: 2rem;
+}
+
+#erasers{
+    top: 31rem;
+    left: 3rem;
+}
+
+#dreidel{
+    top: 31rem;
+    left: 15rem;
+}
+
+#phantom{
+    top: 18rem;
+    left: 20rem;
+}
+
+#deskDragon{
+    top: 15rem;
+    right: 15rem;
+}
+
+#shrek{
+    bottom: 20rem;
+    right: 20rem;
+}
+
+#lizard{
+    bottom: 8rem;
+    right: 12rem;
+}
+
+#toad{
+    top: 10rem;
+    right: 1rem;
+}
+
+#babyBear{
+    bottom: 12rem;
+    left: 35rem;
+} */
+
+.skeleton, .hefty, .erasers, .dreidel, .phantom, .deskDragon, .shrek, .lizard, .toad, .babyBear{
+    width: 180rem;
+    max-width: 180rem;
+}
+
+.skeleton{
+    top: -10rem;
+    left: 0rem;
+}
