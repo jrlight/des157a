@@ -2,10 +2,15 @@
         "use strict"
         console.log('reading js');
         
-        const hotSpots = document.querySelectorAll('#hotspots div');
+        const hotSpots = document.querySelectorAll('area');        
         const theImg = document.querySelector('#bodyImg img');
         let currentSpot;
         let movingMouse;
+
+        hotSpots[5].addEventListener('mouseover', function(){
+            console.log('you went over me');
+        });
+        //^ for debugging, did not get this to trigger
 
         function zoomPhoto(event) {
             currentSpot = event.target.id;
