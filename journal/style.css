@@ -110,7 +110,7 @@ section{
     max-width: 70%;
 }
 
-section date{
+section .date{
     background-color: #030010;
     padding: 0.5em;
 }
