@@ -50,7 +50,7 @@ h1{
 .banner{
     font-family: "Neonderthaw", Impact, serif;
     font-weight: normal;
-    font-size: 3.2rem;
+    font-size: 3.5rem;
     color: var(--neonYellow);    
 }
 
@@ -68,7 +68,7 @@ h1{
 
 h2{
     margin-bottom: 0.6em;
-    margin-top: 1em;
+    margin-top: 1.5em;
     margin-left: 1em;
 }
 
@@ -129,6 +129,37 @@ ul.subnote{
 @media screen and (min-width:900px) {
     body{
         max-width: 80%;
+    }
+
+    .vertical{
+        max-width: 35em;
+    }
+    
+    .horizontal{
+        max-width: 50em;
+    }
+
+    h2, ul.notes, ul.subnotes{
+        padding: 0em 9%;
+    }
+
+    h2{
+        margin-left: 0;
+    }
+
+    ul.notes{
+        margin-left: 3em;
+    }
+    
+    ul.notes li, ul.subnotes li{
+        margin: 0 6%;
+        margin-right: 6em;
+    }
+}
+
+@media screen and (min-width:1350px) {
+    body{
+        max-width: 65%;
     }
 
     .vertical{
