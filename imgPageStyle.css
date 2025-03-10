@@ -73,7 +73,7 @@ h2{
 }
 
 img{
-    margin: 2em auto;
+    margin: 2em 1em;
     border-radius: 0.5em;
 }
 
@@ -104,6 +104,10 @@ ul.subnote{
 }
 
 @media screen and (min-width:690px) {
+    img{
+        margin: 2em auto;
+    }
+
     .vertical{
         max-width: 35em;
     }
