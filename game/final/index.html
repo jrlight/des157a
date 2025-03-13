@@ -16,25 +16,34 @@
         <h1>game of p.i.g.</h1>
 
         <p class="desc">The game of pig, with a H.O.R.S.E.-y twist!</p>
-        <p class="desc">Roll the dice to see if you make your shot— if so, the next player will have to roll a sum of same of higher value.</p>
+        <p class="desc">Roll the dice to see if you make your shot— if so, the next player will have to roll a sum of same of higher value to not get a letter added to their score. First person to p.i.g. is out!</p>
     </header>
     
     <main>
-        <section id="score">
-            <h2>P1: <span class="letters">P.I.</span></h2>
-            <h2>P2: <span class="letters">P.</span></h2>
+        <section id="gameInfo">
+            <section id="gameControl">
+                <button id="startGame">
+                    Randomly Pick the First Player, and Start the Game
+                </button>
+            </section>
+            <section id="score">
+                <h2>P1: <span class="letters"></span></h2>
+                <h2>P2: <span class="letters"></span></h2>
+            </section>
+            <section id="actions"></section>    
+            <section id="announcements"></section>
         </section>
     
         <section id="dice">
             <div>
-                <h2>_'s Turn</h2>
+                <h2></h2>
             </div>
             <div class="diceRoll">
                 <span class="p1">
-                    <img src="images/d1.svg"> <img src="images/d5.svg">
+                    <img src="images/emptyDie.svg"> <img src="images/emptyDie.svg">
                 </span>
                 <span class="p2">
-                    <img src="images/d6.svg"> <img src="images/d3.svg">
+                    <img src="images/emptyDie.svg"> <img src="images/emptyDie.svg">
                 </span>              
             </div>
         </section>
