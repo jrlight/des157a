@@ -63,6 +63,11 @@ main{
 
 #score{
     margin: 0.5em;
+    width: 50%;
+}
+
+#score h2{
+    padding-bottom: 1em;
 }
 
 #dice div{
@@ -111,6 +116,10 @@ main{
     main{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    #score{
+        margin-left: 45%;
     }
 
 }
