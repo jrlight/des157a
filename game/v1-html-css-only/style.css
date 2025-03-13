@@ -31,6 +31,7 @@ body{
     --poll: #ADADAD;
     --square: #FF3A3A;
     background-color: var(--bg);
+    font-family: "Gantari", sans-serif;
 }
 
 header{
@@ -51,25 +52,65 @@ h1{
 .desc{
     color:var(--lightTxt);
     background-color: var(--blacktop);
+    max-width: 25rem;
 }
 
 main{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-section div{
+#score{
+    margin: 0.5em;
+}
+
+#dice div{
     background-color: var(--blacktop);
     border: var(--lightTxt) solid 3px;
+    max-width: 15rem;
+    min-width: 15rem;
 }
 
-section div:last-child{
-    border-top: 0;
+#dice div:first-child{
+    border-radius: 10em 10em 0 0;
+    height: 6rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
-
 
 #dice h2{
     font-family: "Rock Salt", cursive;
     color:var(--lightTxt);
-    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#dice div:last-child{
+    border-top: 0;
+}
+
+.p1, .p2{
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    padding: 2rem 5rem;
+}
+
+#dice img{
+    max-width: 5rem;
+}
+
+#basket img{
+    max-height: 35rem;
+}
+
+
+@media screen and (min-width:700px) {
+    
+    main{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 }

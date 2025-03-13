@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 299 670.1">
+  <defs>
+    <style>
+      .b, .c, .d {
+        fill: none;
+      }
+
+      .b, .d {
+        stroke: #000;
+      }
+
+      .e {
+        fill: #fff;
+      }
+
+      .c {
+        stroke: #ff3a3a;
+        stroke-linejoin: round;
+      }
+
+      .c, .d {
+        stroke-width: 8px;
+      }
+
+      .f {
+        fill: #adadad;
+      }
+
+      .d {
+        stroke-linecap: round;
+      }
+    </style>
+  </defs>
+  <rect class="f" x="133.49" y="178.1" width="32" height="492"/>
+  <rect class="e" width="299" height="209" rx="21" ry="21"/>
+  <rect class="c" x="87.99" y="92.43" width="123" height="98" rx="10" ry="10"/>
+  <line class="d" x1="83.17" y1="178.1" x2="218.17" y2="178.1"/>
+  <path class="b" d="M109.7,281.11l47-102.5M181.2,284.11l-63-105.5M181.2,178.61l-42.5,105.5-51-105.5"/>
+  <path class="b" d="M211.28,178.1l-49,109.5"/>
+</svg>
