@@ -8,9 +8,10 @@
     const whoseTurn = document.querySelector('#dice div h2');
     const shownLetters = document.querySelectorAll('span.letters')
     const diceContainers = document.querySelectorAll('.diceRoll span');
-    const score = document.querySelector('#score');    
     const actionArea = document.querySelector('#actions');
     const announcements = document.querySelector('#announcements')
+    const dribble = new Audio('audio/oneDribble.m4a')
+    const thunk = new Audio('audio/thunk.m4a')
 
     //objects
     const gameData = {
@@ -74,6 +75,7 @@
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             //^ this switches the index: if index is 1 (truthy), its changed to 0; if index is 0 (falsey), its changed to 1
             whoseTurn.innerHTML += `<p>Made it!</p>`;
+            dribble.play();
             gameData.prevRollSum = gameData.rollSum;
             setTimeout(setUpShotContest, 1000);
         }
@@ -81,6 +83,7 @@
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             //^ this switches the index: if index is 1 (truthy), its changed to 0; if index is 0 (falsey), its changed to 1
             whoseTurn.innerHTML += `<p>Missed!</p>`;
+            thunk.play();
             setTimeout(setUpTurn, 1000);
         }
         
@@ -95,17 +98,19 @@
         gameData.roll2 = Math.floor(Math.random()*6)+ 1;
         whoseTurn.innerHTML = `<p>${gameData.players[gameData.index]}'s turn</p>`;
 
-        diceContainers[gameData.index].innerHTML = `<img src="images/${gameData.dice[(gameData.roll1 - 1)]}"> <img src="images/${gameData.dice[(gameData.roll2 - 1)]}"> `;
+        diceContainers[gameData.index].innerHTML = `<img src="images/${gameData.dice[(gameData.roll1 - 1)]}" alt="${gameData.roll1}"> <img src="images/${gameData.dice[(gameData.roll2 - 1)]}" alt="${gameData.roll1}"> `;
         gameData.rollSum = gameData.roll1 + gameData.roll2;
 
         if(gameData.rollSum > gameData.prevRollSum){
             whoseTurn.innerHTML += `<p>Made it!</p>`;
+            dribble.play();
 
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             setTimeout(setUpTurn, 1000);
         }
         else{
             whoseTurn.innerHTML += `<p>Missed!</p>`;
+            thunk.play();
 
             shownLetters[gameData.index].innerHTML += gameData.letters[gameData.currentLetterIndex[gameData.index]];
             gameData.currentLetterIndex[gameData.index] += 1;
