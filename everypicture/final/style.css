@@ -43,6 +43,7 @@ body{
     height: 100%;
     overflow: hidden;
     font-family: 'Trebuchet MS', Arial, sans-serif;
+    background-image: url("images/sceneV1croppedExtended.jpg");
 }
 
 #bodyImg{
@@ -67,6 +68,9 @@ body{
 
 .fullview{
     width: 100%;
+    max-width: 1250px;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 div#heading{
@@ -85,13 +89,14 @@ header{
 
 h1{
     font-family: 'Chiller', 'Courier New', Courier, monospace;
-    font-size: 4.4rem;
+    font-size: 4.5rem;
     margin-top: 2rem;
 }
 
 header div.subtitle{
-    font-size: 1.15rem;
-    margin-top: 0.2rem;
+    font-size: 1.1rem;
+    margin-top: 0rem;
+    text-align: center;
 }
 
 #center{
@@ -166,6 +171,46 @@ header div.subtitle{
     left: 0rem;
 }
 
-@media screen {
-    
+.overlay{
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: white;
+    overflow-y: scroll;
+}
+
+.overlay.left{
+    top: 20%;
+    right: 10%;
+    width: 30vw;
+    height: 60vh;
+}
+
+.overlay.right{
+    top: 20%;
+    left: 10%;
+    width: 30vw;
+    height: 60vh;
+}
+
+.back{
+    margin: 0;
+    padding: 0;
+    border:none;
+    outline: none;
+    background-color: transparent;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: tomato;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1350px){
+    /* img.fullview{
+        height: 100%;
+        margin: auto;
+    } */
 }

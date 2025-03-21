@@ -7,7 +7,21 @@
         let currentSpot;
         let movingMouse;
 
-        hotSpots[5].addEventListener('mouseover', function(){
+        console.log(hotSpots);
+
+        const test = document.querySelector('#hefty');
+        console.log(test);
+        
+
+        hotSpots[0].addEventListener('mouseover', function(){
+            console.log('you went over me');
+        });
+
+        hotSpots[1].addEventListener('mouseover', function(){
+            console.log('you went over me');
+        });
+
+        hotSpots[3].addEventListener('mouseover', function(){
             console.log('you went over me');
         });
         //^ for debugging, did not get this to trigger
