@@ -20,16 +20,24 @@ h1, h2, h3, p, ul, ol{
 }
 
 a{
-    /* text-decoration: none; */
+    text-decoration: none;
 }
+
+
+@font-face {
+    font-family: 'Chiller';
+    src: url(fonts/CHILLER.TTF);
+}
+/* ^this is a default windows font but i don't think it's default for macs. the other font, trebuchet ms is web-safe */
+
 
 /* Start https://www.cursors-4u.com */ 
 * {
     cursor: url(https://cur.cursors-4u.net/games/gam-11/gam1070.ani), url(https://cur.cursors-4u.net/games/gam-11/gam1070.png), auto !important;
 
     /* cursor: url(https://cur.cursors-4u.net/symbols/sym-2/sym169.cur), pointer; */
+    /* ^ this was gonna be a custom pointer cursor (as in, "this cursor only shows up when hovering smth clickable", but i unfortunately wasn't able to get that to work */
 }
-
 /* End https://www.cursors-4u.com */
 
 /* style */
@@ -57,12 +65,11 @@ body{
     position: fixed;
     bottom: 0;
     width: 1100px;
-    transition: all 2.5s ease;
+    transition: all 2s ease;
 }
 
 .fullview{
     width: 1100px;
-    /* max-width: 1100px; */
     left: 50%;
     transform: translate(-50%, 0);
 }
@@ -199,9 +206,61 @@ header div.subtitle{
 }
 
 .skeleton{
-    top: -20px;
+    bottom: 0px;
     left: 0;
 }
+
+.hefty{
+    /* top: -1000px; */
+    bottom: 0;
+    left: -200px;
+}
+
+.erasers{
+    top: -850px;
+    left: -40px;
+}
+
+.hand{
+    top: -400px;
+    left: -70px;
+}
+
+.creamsicle{
+    top: -770px;
+    left: -270px;
+}
+
+.lorax{
+    top: -700px;
+    left: -500px;
+}
+
+.doggie{
+    top: -700px;
+    right: -500px;
+}
+
+.frame{
+    top: -500px;
+    right: -150px;
+}
+
+.glug{
+    top: -900px;
+    right: -100px;
+}
+
+.cowdragon{
+    bottom: 0;
+    right: 0;
+}
+
+.babybear{
+    bottom: 0;
+    right: -700px;
+}
+
 
 .overlay{
     display: none;
@@ -209,6 +268,7 @@ header div.subtitle{
     box-sizing: border-box;
     padding: 20px;
     background-color: white;
+    border-radius: 5%;
     overflow-y: scroll;
 }
 
@@ -224,6 +284,18 @@ header div.subtitle{
     right: 10%;
     width: 30vw;
     height: 60vh;
+}
+
+.overlay.announcement{
+    width: 50vw;
+    height: 20vh;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, 0%);
+}
+
+section p{
+    margin-top: 2em;
 }
 
 .back{
